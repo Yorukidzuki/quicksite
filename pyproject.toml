@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quicksite"
+version = "0.1.0"
+description = "用一個 site.yaml 快速產生並部署靜態網站，附 MCP server 讓 AI agent 直接建站"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["jinja2>=3.1", "pyyaml>=6", "markdown>=3.5"]
+
+[project.optional-dependencies]
+mcp = ["mcp>=2"]
+dev = ["pytest>=8"]
+
+[project.scripts]
+quicksite = "quicksite.cli:main"
+quicksite-mcp = "quicksite.mcp_server:main"
+
+[tool.setuptools]
+packages = ["quicksite"]
+
+[tool.setuptools.package-data]
+quicksite = ["templates/*"]
