@@ -1,6 +1,6 @@
-title: 小明的作品集
-description: 資工系學生，喜歡做一些讓生活更方便的小工具。
-author: 小明
+title: 廖聿翔的作品集
+description: 簡易前端架設測試
+author: 廖聿翔
 theme:
   primary: "#0f766e"
 pages:
@@ -15,5 +15,5 @@ pages:
     content: |
       # 聯絡我
 
-      - Email：xiaoming@example.com
-      - GitHub：[github.com/xiaoming](https://github.com/)
+      - Email：pigisnotbad@gmail.com
+      - GitHub：[github.com/Yorukiduzki](https://github.com/)
