@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.slug != "index" %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  {% if site.description %}<meta name="description" content="{{ site.description }}">{% endif %}
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">{{ site.title }}</a>
+      {% if site.pages | length > 1 %}
+      <nav>
+        {% for p in site.pages %}
+        <a href="{{ p.output_name }}"{% if p.slug == page.slug %} aria-current="page"{% endif %}>{{ p.title }}</a>
+        {% endfor %}
+      </nav>
+      {% endif %}
+    </div>
+  </header>
+  <main class="wrap">
+    {% if page.slug == "index" and site.description %}
+    <p class="lead">{{ site.description }}</p>
+    {% endif %}
+    <article>
+{{ body | safe }}
+    </article>
+  </main>
+  <footer class="wrap">
+    {% if site.author %}© {{ site.author }} · {% endif %}Built with quicksite
+  </footer>
+</body>
+</html>
