@@ -1,0 +1,19 @@
+title: 小明的作品集
+description: 資工系學生，喜歡做一些讓生活更方便的小工具。
+author: 小明
+theme:
+  primary: "#0f766e"
+pages:
+  - slug: index
+    title: 首頁
+    file: pages/index.md
+  - slug: projects
+    title: 作品
+    file: pages/projects.md
+  - slug: contact
+    title: 聯絡
+    content: |
+      # 聯絡我
+
+      - Email：xiaoming@example.com
+      - GitHub：[github.com/xiaoming](https://github.com/)
